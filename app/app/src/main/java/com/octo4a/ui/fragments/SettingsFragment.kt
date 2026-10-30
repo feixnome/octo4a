@@ -89,15 +89,15 @@ class SettingsFragment : PreferenceFragmentCompat() {
         octoprintHandler.extrasStatus.asLiveData().observe(viewLifecycleOwner) {
             when (it) {
                 ExtrasStatus.Installing -> {
-                    installPluginExtras?.summary = "Installing..."
+                    installPluginExtras?.summary = getString(R.string.extras_installing)
                 }
 
                 ExtrasStatus.NotInstalled -> {
-                    installPluginExtras?.summary = "Not installed"
+                    installPluginExtras?.summary = getString(R.string.extras_not_installed)
                 }
 
                 else -> {
-                    installPluginExtras?.summary = "Installed"
+                    installPluginExtras?.summary = getString(R.string.extras_installed)
                 }
             }
         }
@@ -199,7 +199,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         enableCameraPref?.setOnPreferenceChangeListener { _, newValue ->
             if (cameras.isEmpty()) {
                 enableCameraPref.isChecked = false
-                Toast.makeText(requireContext(), "No cameras available", Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), getString(R.string.no_cameras_available), Toast.LENGTH_LONG).show()
             } else {
                 if (!hasCameraPermission) {
                     enableCameraPref.isChecked = false

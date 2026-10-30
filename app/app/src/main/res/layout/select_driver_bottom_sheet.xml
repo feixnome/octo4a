@@ -16,7 +16,7 @@
                 android:textColor="@color/primaryTextColor"
                 android:paddingHorizontal="16dp"
                 android:textSize="18sp"
-                android:text="Manually select serial driver"/>
+                android:text="@string/manually_select_driver"/>
         <View android:layout_width="0dp" android:layout_height="0dp"
               android:layout_weight="1"/>
         <ImageView

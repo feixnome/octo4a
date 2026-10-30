@@ -22,7 +22,7 @@
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:text="OctoPrint for Android"
+                android:text="@string/app_title_bar"
                 android:gravity="center"/>
     </androidx.appcompat.widget.Toolbar>
     <fragment
