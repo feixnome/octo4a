@@ -31,7 +31,7 @@ class StatusViewModel(context: Application,
         viewModelScope.launch {
             withIO {
                 try {
-                    val newestRelease = githubRepository.getNewestRelease("feelfreelinux/octo4a")
+                    val newestRelease = githubRepository.getNewestRelease("feixnome/octo4a")
 
                     val app = getApplication<Octo4aApplication>()
                     val pInfo: PackageInfo = app.packageManager.getPackageInfo(app.packageName, 0)
