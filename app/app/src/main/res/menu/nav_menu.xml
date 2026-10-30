@@ -4,21 +4,21 @@
     <item
             android:id="@+id/serverNav"
             android:icon="@drawable/ic_print_24px"
-            android:title="Server"/>
+            android:title="@string/menu_server"/>
 
     <item
             android:id="@+id/settingsNav"
             android:icon="@drawable/ic_settings_24px"
-            android:title="Settings" />
+            android:title="@string/menu_settings" />
 
     <item
         android:id="@+id/extensionsNav"
         android:icon="@drawable/ic_baseline_extension_24"
-        android:title="Extensions"/>
+        android:title="@string/extensions"/>
 
     <item
             android:id="@+id/aboutNav"
             android:icon="@drawable/ic_info_24px"
-            android:title="About"/>
+            android:title="@string/menu_about"/>
 
 </menu>

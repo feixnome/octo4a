@@ -33,7 +33,7 @@ constructor(private val ctx: Context, private val attributeSet: AttributeSet? = 
                 ServerStatus.BootingUp -> resources.getString(R.string.installation_step_bootup)
                 ServerStatus.Running -> resources.getString(R.string.installation_step_done)
                 ServerStatus.InstallationError -> resources.getString(R.string.installation_error)
-                else -> "Unknown status"
+                else -> resources.getString(R.string.unknown_status)
             }
         }
 

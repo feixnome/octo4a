@@ -2,72 +2,72 @@
 <PreferenceScreen
         xmlns:app="http://schemas.android.com/apk/res-auto">
     <Preference
-            app:title="Install plugin extras"
+            app:title="@string/pref_install_plugin_extras"
             app:key="installPluginExtras"
             app:iconSpaceReserved="false"
-            app:summary="Installs extra dependencies for plugins" />
+            app:summary="@string/pref_install_plugin_extras_summary" />
     <SwitchPreferenceCompat
             app:iconSpaceReserved="false"
             app:key="enableBugReporting"
             app:defaultValue="false"
-            app:title="Enable bug reporting"
-            app:summary="Enables anonymous bug reporting"/>
+            app:title="@string/pref_enable_bug_reporting"
+            app:summary="@string/pref_enable_bug_reporting_summary"/>
     <PreferenceCategory
-            app:title="Server settings"
+            app:title="@string/pref_server_settings"
             app:iconSpaceReserved="false">
         <SwitchPreferenceCompat
             app:defaultValue="false"
             app:iconSpaceReserved="false"
             app:key="enableSSH"
-            app:summary="Enables SSH access from network"
-            app:title="Enable Dropbear SSH Server" />
+            app:summary="@string/pref_ssh_summary"
+            app:title="@string/pref_ssh" />
         <EditTextPreference
                 app:dependency="enableSSH"
                 app:key="changeSSHPassword"
                 app:iconSpaceReserved="false"
                 app:singleLineTitle="false"
-                app:title="Change SSH password for the 'root' user"/>
+                app:title="@string/pref_ssh_password"/>
         <EditTextPreference
                 app:dependency="enableSSH"
                 app:key="sshPort"
                 app:iconSpaceReserved="false"
                 app:defaultValue="8022"
                 app:singleLineTitle="false"
-                app:title="SSH port"/>
+                app:title="@string/pref_ssh_port"/>
         <SwitchPreferenceCompat
                 app:iconSpaceReserved="false"
                 app:singleLineTitle="false"
                 app:key="startOnBoot"
-                app:title="Start on boot"
+                app:title="@string/pref_start_on_boot"
                 app:defaultValue="false"
-                app:summary="Automatically starts octo4a on boot"/>
+                app:summary="@string/pref_start_on_boot_summary"/>
     </PreferenceCategory>
     <PreferenceCategory
-            app:title="Camera settings"
+            app:title="@string/pref_camera_settings"
             app:iconSpaceReserved="false">
         <SwitchPreferenceCompat
                 app:iconSpaceReserved="false"
                 app:singleLineTitle="false"
                 app:key="enableCameraServer"
-                app:title="Enable camera server"
-                app:summary="Enables camera server"/>
+                app:title="@string/pref_enable_camera"
+                app:summary="@string/pref_enable_camera_summary"/>
         <ListPreference
                 app:iconSpaceReserved="false"
                 app:key="selectedCamera"
                 app:dependency="enableCameraServer"
-                app:title="Camera source"
+                app:title="@string/pref_camera_source"
                 app:summary="%s"/>
         <ListPreference
                 app:iconSpaceReserved="false"
                 app:key="selectedResolution"
                 app:dependency="enableCameraServer"
-                app:title="Camera resolution (timelapse/snapshot)"
+                app:title="@string/pref_camera_resolution_snapshot"
                 app:summary="%s"/>
         <ListPreference
                 app:iconSpaceReserved="false"
                 app:key="selectedVideoResolution"
                 app:dependency="enableCameraServer"
-                app:title="Camera resolution (video)"
+                app:title="@string/pref_camera_resolution_video"
                 app:summary="%s"/>
 
         <ListPreference
@@ -77,7 +77,7 @@
                 app:entryValues="@array/rotation_settings_values"
                 app:dependency="enableCameraServer"
                 app:defaultValue="0"
-                app:title="Image rotation"
+                app:title="@string/pref_image_rotation"
                 app:summary="%s"/>
 
 
@@ -88,22 +88,22 @@
                 app:entryValues="@array/limit_fps_values"
                 app:dependency="enableCameraServer"
                 app:defaultValue="-1"
-                app:title="Camera FPS limit"
-                app:summary="%s (Lower FPS reduces CPU usage)"/>
+                app:title="@string/pref_camera_fps"
+                app:summary="@string/pref_camera_fps_summary"/>
         <SwitchPreferenceCompat
                 app:iconSpaceReserved="false"
                 app:key="flashWhenObserved"
                 app:dependency="enableCameraServer"
                 app:defaultValue="false"
-                app:title="Turn on flash"
-                app:summary="Turn on flash when camera is being observed"/>
+                app:title="@string/pref_flash"
+                app:summary="@string/pref_flash_summary"/>
         <SwitchPreferenceCompat
                 app:iconSpaceReserved="false"
                 app:key="manualAF"
                 app:dependency="enableCameraServer"
                 app:defaultValue="false"
-                app:title="Manual camera focus"
-                app:summary="Adjust in the camera preview dialog."/>
+                app:title="@string/camera_preview_manual_af"
+                app:summary="@string/pref_manual_focus_summary"/>
     </PreferenceCategory>
 
 
